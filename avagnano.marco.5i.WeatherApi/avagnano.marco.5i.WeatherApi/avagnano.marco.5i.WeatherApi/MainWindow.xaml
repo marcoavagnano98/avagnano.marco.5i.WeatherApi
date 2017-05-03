@@ -1,0 +1,26 @@
+﻿<Window x:Class="avagnano.marco._5i.WeatherApi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:avagnano.marco._5i.WeatherApi"
+        mc:Ignorable="d"
+        Title="Marco Avagnano Weather Api 5I" Height="400" Width="700" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="370"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+            <Label Content="Inserisci la città" FontSize="20"/>
+            <TextBox MinWidth="200" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="Rimini" FontSize="20" Name="txt1"/>
+        </StackPanel>
+        <Button Grid.Column="1" Grid.Row="0" Margin="25" Content="Cerca condizioni meteo" FontSize="20" Click="Button_Click"/>
+        <DataGrid Grid.Row="1"  Name="dgdati"></DataGrid>
+        <Image Grid.Column="1" Grid.Row="1" Name="weather_icon"></Image>
+    </Grid>
+</Window>
